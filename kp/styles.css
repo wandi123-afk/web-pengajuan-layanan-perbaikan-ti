@@ -1,0 +1,268 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    color: #3b86ff;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background-color: #3b86ff;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #3b86ff;
+    background-color: #ffffff;
+}
+
+form button {
+    padding: 15px;
+    background-color: #3b86ff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    transform: translateY(2px);
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+table th {
+    background-color: #3b86ff;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #f1f7ff;
+}
+
+/* Status Badge */
+.status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.status-pending {
+    background-color: #f0ad4e;
+}
+
+.status-accepted {
+    background-color: #5cb85c;
+}
+.success-message{
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+.status-rejected {
+    background-color: #d9534f;
+
+    
+}
+.btn-delete{
+    background: red;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-delete:hover{
+    background: darkred;
+}
+.btn-edit{
+    background: #5bc0de;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.btn-edit:hover{
+    background: #31b0d5;
+}
+
+.btn-delete{
+    background: #d9534f;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.btn-delete:hover{
+    background: #c9302c;
+}
+.alert-success{
+    background-color:#5cb85c;
+    color:white;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:4px;
+    font-weight:bold;
+}
+
+/* Custom Input Styles */
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Alert Styling */
+.alert {
+    padding: 18px;
+    background-color: #3b86ff;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+
+
+.alert.error {
+    background-color: #d9534f;
+}
+
+.alert.success {
+    background-color: #5cb85c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #888;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    table, form, header, footer {
+        font-size: 14px;
+    }
+
+    header h2 {
+        font-size: 26px;
+    }
+
+    form button {
+        font-size: 16px;
+    }
+}
