@@ -18,6 +18,7 @@ dan pengelolaan layanan perbaikan perangkat TI.
 - PHP
 - MySQL
 - HTML
+- JavaScript
 - CSS
 - Bootstrap
 
