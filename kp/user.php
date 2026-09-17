@@ -32,8 +32,8 @@ $result_requests = $stmt_requests->get_result();
 // Data untuk grafik
 $status_data = [
     'Pending' => 0,
-    'Diterima' => 0,
-    'Ditolak' => 0
+    'Accepted' => 0,
+    'Rejected' => 0
 ];
 
 while ($row = $result_requests->fetch_assoc()) {
@@ -180,7 +180,7 @@ while ($row = $result_requests->fetch_assoc()) {
     <script>
         // Data untuk grafik
         const statusData = {
-            labels: ['Pending', 'Diterima', 'Ditolak'],
+            labels: ['Pending', 'Accepted', 'Rejected'],
             datasets: [{
                 label: 'Jumlah Pengajuan Berdasarkan Status',
                 data: [<?= $status_data['Pending'] ?>, <?= $status_data['Diterima'] ?>, <?= $status_data['Ditolak'] ?>],
